@@ -11,9 +11,13 @@ public class Ejercicio2 {
 		int num;
 		char letra; // Esta es la variable donde meteremos la letra del dni.
 		Scanner sc = new Scanner(System.in);
+		// Pedimos al ususario la variable.
 		System.out.println("Introduzca el número de dni");
+		// Asignamos el valor a dni
 		dni= sc.nextInt();
+		// Dividimos el dni entre 23.
 		num = dni%23;
+		// Dependiendo del valor de num asignaremos una letra u otra.
 		letra = switch(num) {
 		case 0 -> {
 			yield 'T';
@@ -89,7 +93,10 @@ public class Ejercicio2 {
 			yield 'Ñ';
 		}
 		};
+		// Mostramos mensaje con resultado.
 		System.out.println("La letra del dni es " + letra);
+		// Cerramos escaner.
+		sc.close();
 	}
 
 }
